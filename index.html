@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Green Garden en Provence</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <nav>
+        <a href="#services" class="nav-link"><i class="fas fa-seedling"></i> Services</a>
+        <a href="#gallery" class="nav-link"><i class="fas fa-images"></i> Galerie</a>
+        <a href="#horaires" class="nav-link"><i class="fas fa-clock"></i> Horaires</a>
+        <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <div class="hero-logo-container">
+        <img src="images/logo.png" alt="Logo Green Garden en Provence" class="logo-hero" />
+      </div>
+      <h1 class="hero-title">Green Garden en Provence</h1>
+      <p class="hero-subtitle">Excellence en aménagement paysager</p>
+      <div class="hero-divider"></div>
+      <p class="hero-description">Spécialiste de l'entretien et de la création d'espaces verts en Provence</p>
+      <button class="cta-button" onclick="scrollToServices()">
+        Découvrir nos services
+      </button>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="services-intro">
+      <div class="intro-content">
+        <div class="intro-badge">
+          <i class="fas fa-leaf"></i>
+          <span>Expertise locale en Provence</span>
+        </div>
+        <h2 class="intro-title">Notre expertise au service de vos jardins</h2>
+        
+        <div class="intro-content-grid">
+          <div class="intro-text">
+            <p class="intro-paragraph">
+              <strong>Green Garden en Provence</strong> intervient dans les villages aux alentours des <em>Alpilles</em>, du <em>Luberon</em> et d'<em>Avignon</em>. 
+              L'entreprise met à votre service son savoir-faire et sa créativité dans vos jardins.
+            </p>
+            <p class="intro-paragraph">
+              Jeune, créatif et dynamique, je suis à votre service pour entretenir, réaménager ou créer vos espaces verts.
+            </p>
+          </div>
+          
+          <div class="intro-visual">
+            <div class="intro-feature">
+              <div class="intro-feature-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="intro-feature-text">
+                <h4>Zone d'intervention</h4>
+                <p>Alpilles, Luberon et région d'Avignon</p>
+              </div>
+            </div>
+            
+            <div class="intro-feature">
+              <div class="intro-feature-icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <div class="intro-feature-text">
+                <h4>Approche écologique</h4>
+                <p>Respect de l'environnement et solutions durables</p>
+              </div>
+            </div>
+            
+            <div class="intro-feature">
+              <div class="intro-feature-icon">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <div class="intro-feature-text">
+                <h4>Service personnalisé</h4>
+                <p>Accompagnement sur-mesure pour chaque projet</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="services-section">
+      <h2><i class="fas fa-tools"></i> Nos Services</h2>
+
+      <div class="tabs">
+        <button class="tab-button active" data-tab="entretien">
+          <i class="fas fa-leaf"></i> Entretien de jardin et piscine
+        </button>
+        <button class="tab-button" data-tab="creation">
+          <i class="fas fa-paint-brush"></i> Création jardin paysager
+        </button>
+      </div>
+
+      <div class="tab-content active" id="entretien">
+        <p class="tab-description"><em>Contrats annuels ou interventions forfaitaires</em></p>
+        <div class="service-list">
+          <div class="service-item" data-aos="fade-up" data-aos-delay="50">
+            <img src="images/Haies.png" alt="">
+            <p>Taille d'arbustes, de haies et de cyprès</p>
+          </div>
+          <div class="service-item" data-aos="fade-up" data-aos-delay="100">
+            <img src="images/TondrePelouse.png" alt="">
+            <p>Tonte de pelouses</p>
+          </div>
+          <div class="service-item" data-aos="fade-up" data-aos-delay="150">
+            <img src="images/Desherbage.png" alt="">
+            <p>Désherbage et nettoyage</p>
+          </div>
+          <div class="service-item" data-aos="fade-up" data-aos-delay="200">
+            <img src="images/Traitement_Ecologique.png" alt="">
+            <p>Traitement écologique</p>
+          </div>
+          <div class="service-item" data-aos="fade-up" data-aos-delay="250">
+            <img src="images/Entretien_Piscine.png" alt="">
+            <p>Entretien piscine</p>
+          </div>
+          <div class="service-item" data-aos="fade-up" data-aos-delay="300">
+            <img src="images/Garnissage_Gazon.png" alt="">
+            <p>Regarnissage du gazon</p>
+          </div>
+          <div class="service-item" data-aos="fade-up" data-aos-delay="350">
+            <img src="images/Debroussaillage.png" alt="">
+            <p>Débroussaillage</p>
+          </div>
+          <div class="service-item" data-aos="fade-up" data-aos-delay="400">
+            <img src="images/Remise_Etat.png" alt="">
+            <p>Remise en état complète</p>
+          </div>
+          <div class="service-item" data-aos="fade-up" data-aos-delay="450">
+            <img src="images/Elagage.png" alt="">
+            <p>Élagage</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="creation">
+        <p class="tab-description"><em>Esquisses, palette végétale, chiffrage détaillé</em></p>
+        <div class="service-list">
+          <div class="service-item" data-aos="fade-up" data-aos-delay="50">
+            <img src="images/Massifs.png" alt="">
+            <p>Plantation de massifs</p>
+          </div>
+          <div class="service-item" data-aos="fade-up" data-aos-delay="100">
+            <img src="images/Pelouse_Naturelle.png" alt="">
+            <p>Pelouses naturelles</p>
+          </div>
+          <div class="service-item" data-aos="fade-up" data-aos-delay="150">
+            <img src="images/Arrosage_Auto.png" alt="">
+            <p>Arrosage automatisé</p>
+          </div>
+          <div class="service-item" data-aos="fade-up" data-aos-delay="200">
+            <img src="images/Allee_Jardin.png" alt="">
+            <p>Création d'allées</p>
+          </div>
+          <div class="service-item" data-aos="fade-up" data-aos-delay="250">
+            <img src="images/Delimitation.png" alt="">
+            <p>Délimitation des zones</p>
+          </div>
+          <div class="service-item" data-aos="fade-up" data-aos-delay="300">
+            <img src="images/Robot_Tondeuse.png" alt="">
+            <p>Robot tondeuse</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2><i class="fas fa-camera"></i> Galerie</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="photo1.jpg" alt="Jardin 1" />
+        <div class="gallery-overlay">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="photo2.jpg" alt="Jardin 2" />
+        <div class="gallery-overlay">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="photo3.jpg" alt="Jardin 3" />
+        <div class="gallery-overlay">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="photo4.jpg" alt="Jardin 4" />
+        <div class="gallery-overlay">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="photo5.jpg" alt="Jardin 5" />
+        <div class="gallery-overlay">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="photo6.jpg" alt="Jardin 6" />
+        <div class="gallery-overlay">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="horaires">
+    <h2><i class="fas fa-clock"></i> Horaires</h2>
+    <div class="schedule-container">
+      <table class="schedule-table">
+        <thead>
+          <tr><th>Jour</th><th>Horaires</th></tr>
+        </thead>
+        <tbody>
+          <tr class="schedule-row"><td>Lundi</td><td>9h – 12h / 14h – 18h</td></tr>
+          <tr class="schedule-row"><td>Mardi</td><td>9h – 12h / 14h – 18h</td></tr>
+          <tr class="schedule-row"><td>Mercredi</td><td>9h – 12h / 14h – 18h</td></tr>
+          <tr class="schedule-row"><td>Jeudi</td><td>9h – 12h / 14h – 18h</td></tr>
+          <tr class="schedule-row"><td>Vendredi</td><td>9h – 12h / 14h – 18h</td></tr>
+          <tr class="schedule-row"><td>Samedi</td><td>9h – 12h</td></tr>
+          <tr class="schedule-row closed"><td>Dimanche</td><td>Fermé</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+<section id="contact">
+  <h2><i class="fas fa-phone"></i> Contact</h2>
+
+  <h3 id="contact-question">Vous avez une question ? Contactez-nous :</h3>
+
+  <div class="contact-info">
+    <div class="contact-item" onclick="window.location.href='tel:+33670238200'">
+  <i class="fas fa-phone"></i>
+  <strong>Téléphone :</strong> 06 70 23 82 00
+</div>
+    <div class="contact-item" onclick="window.location.href='mailto:ggardenpro@icloud.com'">
+  <i class="fas fa-envelope"></i>
+  <strong>Email :</strong> ggardenpro@icloud.com
+</div>
+    <div class="contact-item" onclick="window.open('https://m.facebook.com/people/Green-Garden-en-Provence/61572026160418/', '_blank')">
+  <i class="fab fa-facebook"></i>
+  <strong>Facebook :</strong> Green Garden en Provence
+</div>
+  </div>
+
+  <div class="form-section">
+
+
+  <br/><br/>
+  <h3 id="form-title">Dites-nous en plus sur votre demande</h3>
+
+  <form action="https://formsubmit.co/sosoubry@gmail.com" method="POST" target="hidden_iframe" onsubmit="formEnvoye()" class="contact-form">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_subject" value="[Green Garden] Nouveau message depuis le formulaire" />
+
+    <div class="form-group">
+      <label for="name"><i class="fas fa-user"></i> Nom :</label>
+      <input type="text" id="name" name="name" required />
+    </div>
+
+    <div class="form-group">
+      <label for="email"><i class="fas fa-envelope"></i> E-mail :</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+
+    <div class="form-group">
+      <label for="phone"><i class="fas fa-phone"></i> Téléphone :</label>
+      <input type="tel" id="phone" name="phone" required />
+    </div>
+
+    <div class="form-group">
+      <label for="message"><i class="fas fa-comment"></i> Message :</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">
+      <i class="fas fa-paper-plane"></i> Envoyer
+    </button>
+  </form>
+
+  <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+  <div id="confirmation" class="confirmation-message">
+    <i class="fas fa-check-circle"></i>
+    Formulaire bien envoyé, merci !
+  </div>
+  </div>
+</section>
+
+  <footer>
+    © 2025 Green Garden en Provence - Tous droits réservés
+    <div class="footer-social">
+      <a href="tel:+33670238200"><i class="fas fa-phone"></i></a>
+      <a href="mailto:ggardenpro@icloud.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://m.facebook.com/people/Green-Garden-en-Provence/61572026160418/" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
