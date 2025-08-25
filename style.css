@@ -1026,6 +1026,33 @@ footer {
     flex-direction: column;
     text-align: center;
   }
+  
+  /* Désactivation des effets hover du tableau sur tablette/mobile */
+  .schedule-row:hover {
+    background: white;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .schedule-row:hover::before {
+    background: transparent;
+  }
+  
+  .schedule-row.closed:hover {
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.05), rgba(255, 193, 7, 0.05));
+  }
+  
+  /* Amélioration du tableau sur mobile */
+  .schedule-container {
+    padding: 20px;
+    margin: 0 15px;
+  }
+  
+  .schedule-table th,
+  .schedule-table td {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1097,5 +1124,32 @@ footer {
   
   .intro-text {
     padding: 25px;
+  }
+  
+  /* Optimisation complète du tableau pour mobile */
+  .schedule-container {
+    padding: 15px;
+    margin: 0 10px;
+  }
+  
+  .schedule-table th,
+  .schedule-table td {
+    padding: 10px 8px;
+    font-size: 0.85rem;
+  }
+  
+  .schedule-table th:first-child,
+  .schedule-table td:first-child {
+    font-size: 0.8rem;
+  }
+  
+  /* Désactivation complète des transformations et effets sur très petit écran */
+  .schedule-row {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  
+  .schedule-row::before {
+    display: none;
   }
 }
