@@ -963,32 +963,30 @@ footer {
 
 /* Désactivation complète des effets hover sur les appareils tactiles */
 @media (hover: none) and (pointer: coarse) {
+  /* Suppression complète des pseudo-éléments pour les appareils tactiles */
+  .schedule-row::before,
+  .schedule-row:hover::before,
+  .schedule-row.closed::before {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+  
   .schedule-row:hover {
     background: white !important;
     transform: none !important;
     box-shadow: none !important;
   }
   
-  .schedule-row:hover::before {
-    background: transparent !important;
-  }
-  
   .schedule-row.closed:hover {
     background: linear-gradient(135deg, rgba(220, 53, 69, 0.05), rgba(255, 193, 7, 0.05)) !important;
   }
   
-  .schedule-row.closed:hover::before {
-    background: #dc3545 !important;
-  }
-  
-  /* Forcer les bordures à rester statiques */
-  .schedule-row::before {
-    display: none !important;
-  }
-  
-  .schedule-row.closed::before {
-    background: #dc3545 !important;
-    display: block !important;
+  .schedule-row.closed {
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.05), rgba(255, 193, 7, 0.05)) !important;
+    color: #dc3545 !important;
   }
 }
 
@@ -1059,27 +1057,34 @@ footer {
     text-align: center;
   }
   
-  /* DÉSACTIVATION TOTALE des effets hover du tableau */
+  /* SUPPRESSION TOTALE des pseudo-éléments du tableau */
+  .schedule-row::before,
+  .schedule-row:hover::before,
+  .schedule-row:active::before,
+  .schedule-row:focus::before,
+  .schedule-row.closed::before {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    visibility: hidden !important;
+  }
+  
   .schedule-row {
     background: white !important;
     transform: none !important;
     box-shadow: none !important;
     transition: none !important;
+    border-left: none !important;
   }
   
-  .schedule-row:hover {
+  .schedule-row:hover,
+  .schedule-row:active,
+  .schedule-row:focus {
     background: white !important;
     transform: none !important;
     box-shadow: none !important;
-  }
-  
-  .schedule-row::before {
-    display: none !important;
-  }
-  
-  .schedule-row:hover::before {
-    background: transparent !important;
-    display: none !important;
   }
   
   .schedule-row.closed {
@@ -1090,10 +1095,6 @@ footer {
   
   .schedule-row.closed:hover {
     background: linear-gradient(135deg, rgba(220, 53, 69, 0.05), rgba(255, 193, 7, 0.05)) !important;
-  }
-  
-  .schedule-row.closed::before {
-    display: none !important;
   }
   
   /* Amélioration du tableau sur mobile */
@@ -1197,7 +1198,21 @@ footer {
     font-size: 0.8rem;
   }
   
-  /* FORCE la suppression de tous les effets sur très petit écran */
+  /* ÉLIMINATION TOTALE des pseudo-éléments */
+  .schedule-row::before,
+  .schedule-row:hover::before,
+  .schedule-row:active::before,
+  .schedule-row:focus::before,
+  .schedule-row.closed::before {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+  
   .schedule-row,
   .schedule-row:hover,
   .schedule-row:active,
@@ -1206,16 +1221,12 @@ footer {
     transform: none !important;
     box-shadow: none !important;
     transition: none !important;
-  }
-  
-  .schedule-row::before,
-  .schedule-row:hover::before {
-    display: none !important;
-    background: none !important;
+    border-left: none !important;
   }
   
   .schedule-row.closed,
   .schedule-row.closed:hover {
     background: linear-gradient(135deg, rgba(220, 53, 69, 0.05), rgba(255, 193, 7, 0.05)) !important;
+    color: #dc3545 !important;
   }
 }
