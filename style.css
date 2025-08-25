@@ -961,6 +961,38 @@ footer {
   }
 }
 
+/* Désactivation complète des effets hover sur les appareils tactiles */
+@media (hover: none) and (pointer: coarse) {
+  .schedule-row:hover {
+    background: white !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  
+  .schedule-row:hover::before {
+    background: transparent !important;
+  }
+  
+  .schedule-row.closed:hover {
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.05), rgba(255, 193, 7, 0.05)) !important;
+  }
+  
+  .schedule-row.closed:hover::before {
+    background: #dc3545 !important;
+  }
+  
+  /* Forcer les bordures à rester statiques */
+  .schedule-row::before {
+    display: none !important;
+  }
+  
+  .schedule-row.closed::before {
+    background: #dc3545 !important;
+    display: block !important;
+  }
+}
+
+/* Alternative plus agressive pour mobile */
 @media (max-width: 768px) {
   .hero-section {
     padding: 120px 20px 80px;
@@ -1027,19 +1059,41 @@ footer {
     text-align: center;
   }
   
-  /* Désactivation des effets hover du tableau sur tablette/mobile */
+  /* DÉSACTIVATION TOTALE des effets hover du tableau */
+  .schedule-row {
+    background: white !important;
+    transform: none !important;
+    box-shadow: none !important;
+    transition: none !important;
+  }
+  
   .schedule-row:hover {
-    background: white;
-    transform: none;
-    box-shadow: none;
+    background: white !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  
+  .schedule-row::before {
+    display: none !important;
   }
   
   .schedule-row:hover::before {
-    background: transparent;
+    background: transparent !important;
+    display: none !important;
+  }
+  
+  .schedule-row.closed {
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.05), rgba(255, 193, 7, 0.05)) !important;
+    color: #dc3545 !important;
+    font-weight: 600 !important;
   }
   
   .schedule-row.closed:hover {
-    background: linear-gradient(135deg, rgba(220, 53, 69, 0.05), rgba(255, 193, 7, 0.05));
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.05), rgba(255, 193, 7, 0.05)) !important;
+  }
+  
+  .schedule-row.closed::before {
+    display: none !important;
   }
   
   /* Amélioration du tableau sur mobile */
@@ -1143,13 +1197,25 @@ footer {
     font-size: 0.8rem;
   }
   
-  /* Désactivation complète des transformations et effets sur très petit écran */
-  .schedule-row {
+  /* FORCE la suppression de tous les effets sur très petit écran */
+  .schedule-row,
+  .schedule-row:hover,
+  .schedule-row:active,
+  .schedule-row:focus {
+    background: white !important;
     transform: none !important;
     box-shadow: none !important;
+    transition: none !important;
   }
   
-  .schedule-row::before {
-    display: none;
+  .schedule-row::before,
+  .schedule-row:hover::before {
+    display: none !important;
+    background: none !important;
+  }
+  
+  .schedule-row.closed,
+  .schedule-row.closed:hover {
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.05), rgba(255, 193, 7, 0.05)) !important;
   }
 }
